@@ -1,7 +1,7 @@
 from flask import Flask, Response,jsonify
 import logging
 import GameManager
-
+import Constants
 app = Flask(__name__)
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -9,7 +9,9 @@ logging.basicConfig(level=logging.INFO)
 
 @app.route('/')
 def hello_world():
-    result = GameManager.play_game(1,2)
+    first_player = GameManager.import_student_files(Constants.FIRST_PLAYER_MODULE_NAME)
+    second_player = GameManager.import_student_files(Constants.SECOND_PLAYER_MODULE_NAME)
+    result = GameManager.play_game(first_player,second_player)
     logging.info("finish to run the game")
     return str(result)
 

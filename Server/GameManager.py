@@ -1,9 +1,8 @@
 import numpy
 import Constants
-import students_files.first_player as player_1
-import students_files.second_player as player_2
 import logging
 import copy
+import importlib.util
 
 
 def play_game(first_player, second_player):
@@ -17,11 +16,11 @@ def play_game(first_player, second_player):
         logging.info("playing step number :" + str(steps_played))
         logging.info("current board state is " + str(board))
         if is_first_player_turn:
-            logging.info("calling function " + str(player_1.play.__name__) + " from module " + str(player_1.__name__))
-            board = player_1.play(board,Constants.BOARD_SIZE,Constants.first_player_sign,Constants.second_player_sign)
+            logging.info("calling function " + str(first_player.play.__name__) + " from module " + str(first_player.__name__))
+            board = first_player.play(board,Constants.BOARD_SIZE,Constants.first_player_sign,Constants.second_player_sign)
         else:
-            logging.info("calling function " + str(player_2.play.__name__) + " from module " + str(player_2.__name__))
-            board = player_2.play(board,Constants.BOARD_SIZE,Constants.second_player_sign,Constants.first_player_sign)
+            logging.info("calling function " + str(second_player.play.__name__) + " from module " + str(second_player.__name__))
+            board = second_player.play(board,Constants.BOARD_SIZE,Constants.second_player_sign,Constants.first_player_sign)
         game_moves.append(create_turn_snapshot(board))
         is_first_player_turn = not is_first_player_turn
 
@@ -39,3 +38,11 @@ def game_over(steps_played):
 
 def create_turn_snapshot(board):
     return copy.deepcopy(board)
+
+
+def import_student_files(module_name):
+    spec = importlib.util.spec_from_file_location(module_name, str(Constants.BASE_PATH + r"\\" + module_name))
+    foo = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(foo)
+
+    return foo
