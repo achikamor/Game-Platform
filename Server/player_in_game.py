@@ -4,6 +4,7 @@ from Server import Constants
 import logging
 import numpy
 from Server.maze_game import BaseGamePlayer
+from Server import game_engine
 
 
 class PlayerInGame:
@@ -44,17 +45,15 @@ class PlayerInGame:
     def freeze(self, freeze_turn_num: int) -> None:
         self._stop_turns_left += freeze_turn_num
 
-    def is_visit_cell(self, direction : Direction) -> bool:
-        current_direction = PlayerInGame.convert_direction_to_direction_vector(direction)
+    def is_visit_cell(self, direction: Direction) -> bool:
+        current_direction = game_engine.convert_direction_to_direction_vector(direction)
         return self._visited_cells[self._position[0] + current_direction[0]][self._position[1] + current_direction[1]]
 
     def get_last_move(self) -> Direction:
         return self._last_move
 
-    def set_last_move(self, direction : Direction) -> None:
+    def set_last_move(self, direction: Direction) -> None:
         self._last_move = direction
 
     def play(self, player: BaseGamePlayer) -> Action:
         return self._play_turn(player)
-
-

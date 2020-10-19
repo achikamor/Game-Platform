@@ -82,6 +82,6 @@ class StudentGamePlayer(BaseGamePlayer):
         new_direction = game_engine.convert_direction_to_direction_vector(direction)
         return self.check_movement_with_direction_vector(new_direction)
 
-    def check_movement_with_direction_vector(self, direction : DirectionsVector) -> bool:
+    def check_movement_with_direction_vector(self, direction: DirectionsVector) -> bool:
         new_cell_value = (self.player.get_location()[0] + direction[0], self.player.get_location()[1] + direction[1])
-        return self.map[new_cell_value[0]][new_cell_value[1]].is_free_to_move()
+        return self.map.get_map()[new_cell_value[0]][new_cell_value[1]].is_free_to_move()

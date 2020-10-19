@@ -95,8 +95,8 @@ def bomb(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame,
     pass
 
 
-def create_turn_snapshot(board: GameMap):
-    return copy.deepcopy(GameMap)
+def create_turn_snapshot(board: GameMap) -> GameMap:
+    return copy.deepcopy(board)
 
 
 def delete_game(directory_path: str) -> None:

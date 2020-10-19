@@ -13,4 +13,3 @@ def create_directory(base_path: str) -> str:
 def init_map(filepath: str) -> GameMap:
     # init map with padding of 1 outline of obstacles
     pass
-

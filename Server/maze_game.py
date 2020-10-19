@@ -25,7 +25,7 @@ class DoorDistanceStatus(Enum):
 
 class BaseGamePlayer(ABC):
     @abstractmethod
-    def check_movement(self, direction : Direction) -> bool:
+    def check_movement(self, direction: Direction) -> bool:
         pass
 
     @abstractmethod
@@ -33,11 +33,11 @@ class BaseGamePlayer(ABC):
         pass
 
     @abstractmethod
-    def check_old_steps(self, direction : Direction) -> bool:
+    def check_old_steps(self, direction: Direction) -> bool:
         pass
 
     @abstractmethod
-    def doors_direction(self, direction : Direction) -> bool:
+    def doors_direction(self, directions: Direction) -> bool:
         pass
 
     @abstractmethod
@@ -49,5 +49,5 @@ class BaseGamePlayer(ABC):
         pass
 
     @abstractmethod
-    def bombs_direction(self, direction : Direction) -> bool:
+    def bombs_direction(self, direction: Direction) -> bool:
         pass
