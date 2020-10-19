@@ -25,3 +25,6 @@ class GameMap:
 
     def is_free_to_move(self, location : (int , int)) -> bool:
         return self._map_obstacles[location[0]][location[1]]
+
+    def get_map(self):
+        return self._map_obstacles

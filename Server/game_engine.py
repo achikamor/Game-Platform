@@ -4,19 +4,18 @@ import logging
 import copy
 from Server.game_map import GameMap
 from Server.player_in_game import PlayerInGame
-from typing import List
 from Server.student_game_player import StudentGamePlayer
 from Server.maze_game import Action, Direction
-from Server.Constants import DirectionsVector, CellValueForUi
+from Server.Constants import DirectionsVector
 
 
-def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame) -> List[int][int]:
+def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame):
     current_turn_number = 0
     game_turns = []
     first_bomb_turns_to_explode = None
     second_bomb_turn_to_explode = None
-
-    while not is_game_over(maze, first_player, second_player, current_turn_number):
+    game_status = get_game_status(maze, first_player, second_player, current_turn_number)
+    while game_status == Constants.GameOptions.Running:
         if first_player.can_play():
             turn_player = StudentGamePlayer(create_turn_snapshot(maze), first_player)
             wanted_action = first_player.play(turn_player)
@@ -33,6 +32,22 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
         else:
             first_player.wait_turn()
 
+        if second_player.can_play():
+            turn_player = StudentGamePlayer(create_turn_snapshot(maze), second_player)
+            wanted_action = second_player.play(turn_player)
+            if wanted_action != Action.DROP_BOMB:
+                direction_to_move = convert_action_to_direction_vector(wanted_action)
+                if turn_player.check_movement_with_direction_vector(direction_to_move):
+                    second_player.move(direction_to_move)
+                else:
+                    second_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
+            else:
+                if second_player.can_drop_bomb():
+                    maze.set_second_player_bomb(second_player.get_location())
+                    second_bomb_turn_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+        else:
+            second_player.wait_turn()
+
         if first_bomb_turns_to_explode is not None:
             if first_bomb_turns_to_explode == 0:
                 bomb(maze, first_player, second_player, maze.get_first_player_bomb())
@@ -41,22 +56,46 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
             else:
                 first_bomb_turns_to_explode -= 1
 
-        if second_bomb_turn_to_explode is not None and second_bomb_turn_to_explode == 0:
-            bomb(maze, first_player, second_player, maze.get_second_player_bomb())
+        if second_bomb_turn_to_explode is not None:
+            if second_bomb_turn_to_explode == 0:
+                bomb(maze, first_player, second_player, maze.get_second_player_bomb())
+                second_bomb_turn_to_explode = None
+                maze.set_second_player_bomb(None)
+            else:
+                second_bomb_turn_to_explode -= 1
+
+        maze_for_ui = convert_map_status_to_numbers_for_ui(maze, first_player, second_player)
+        current_turn_number += 1
+        game_status = get_game_status(maze, first_player, second_player, current_turn_number)
+        current_turn = [maze_for_ui, not first_player.can_play(), not second_player.can_play(), game_status.value]
+        game_turns.append(current_turn)
+
+    return game_turns
 
 
-def is_game_over(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame, turn_number: int) -> bool:
-    door_location = maze.get_door_location()
-    return first_player.position == door_location or \
-           second_player.position == door_location or \
-           turn_number == Constants.MAX_TURN_PLAYED
+def get_game_status(maze: GameMap,
+                    first_player: PlayerInGame,
+                    second_player: PlayerInGame, turn_number: int) -> Constants.GameOptions:
+
+    game_status = Constants.GameOptions.Running
+    if turn_number > Constants.MAX_TURN_PLAYED:
+        game_status = Constants.GameOptions.Loss
+    elif first_player.get_location() == maze.get_door_location():
+        if second_player.get_location() == maze.get_door_location():
+            game_status = Constants.GameOptions.Draw
+        else:
+            game_status = Constants.GameOptions.FirstPlayerWin
+    elif second_player.get_location() == maze.get_door_location():
+        game_status = Constants.GameOptions.SecondPlayerWin
+
+    return game_status
 
 
 def bomb(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame, bomb_location: (int, int)) -> None:
     pass
 
 
-def create_turn_snapshot(board: GameMap) -> GameMap:
+def create_turn_snapshot(board: GameMap):
     return copy.deepcopy(GameMap)
 
 
@@ -93,18 +132,18 @@ def convert_action_to_direction_vector(wanted_action: Action) -> DirectionsVecto
 
 def convert_map_status_to_numbers_for_ui(maze: GameMap,
                                          first_player: PlayerInGame,
-                                         second_player: PlayerInGame) -> List[int][int]:
-    map_for_ui = numpy.full((len(maze), len(maze[0])), fill_value=0, dtype=int)
+                                         second_player: PlayerInGame) -> numpy.ndarray:
+    map_for_ui = numpy.full((len(maze.get_map()), len(maze.get_map()[0])), fill_value=0, dtype=int)
     first_bomb_location = maze.get_first_player_bomb()
     second_bomb_location = maze.get_second_player_bomb()
     door_location = maze.get_door_location()
 
-    for row in range(len(maze)):
-        for column in range(len(maze[0])):
+    for row in range(len(maze.get_map())):
+        for column in range(len(maze.get_map()[0])):
             current_position = (row, column)
             cell_value = ""
 
-            cell_value += "1" if maze[row][column] else "0"
+            cell_value += "1" if maze.get_map()[row][column] else "0"
 
             cell_value += "1" if first_player.get_location() == current_position else "0"
 
@@ -118,3 +157,5 @@ def convert_map_status_to_numbers_for_ui(maze: GameMap,
 
             # convert from binary to int
             map_for_ui[row][column] = int(cell_value, 2)
+
+    return map_for_ui

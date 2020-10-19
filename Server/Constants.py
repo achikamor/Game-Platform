@@ -14,11 +14,12 @@ class DirectionsVector(Enum):
     RIGHT = (0, -1)
 
 
-class GameEndOptions(Enum):
-    FirstPlayerWin = "player1"
-    SecondPlayerWin = "player2"
+class GameOptions(Enum):
+    FirstPlayerWin = "first_player"
+    SecondPlayerWin = "second_player"
     Draw = "draw"
-    lose = "loss"
+    Loss = "loss"
+    Running = "running"
 
 
 # Change it on production
