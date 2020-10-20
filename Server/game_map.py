@@ -1,8 +1,9 @@
 from typing import List
+import numpy
 
 
 class GameMap:
-    def __init__(self, game_map: List[bool][bool], door_location: (int, int)):
+    def __init__(self, game_map: numpy.ndarray, door_location: (int, int)):
         self._map_obstacles = game_map
         self._first_player_bomb_location = None
         self._second_player_bomb_location = None

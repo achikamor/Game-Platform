@@ -36,6 +36,7 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
                             maze.set_first_player_bomb(first_player.get_location())
                             first_player.reduce_bomb_count()
                             first_bomb_turns_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+            # if student code contains exception handling, it will not work
             except TimeoutException as e:
                 game_status = Constants.GameOptions.FirstPlayerTimeOut
                 is_game_interrupted = True
@@ -47,7 +48,7 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
         else:
             first_player.wait_turn()
 
-        if second_player.can_play():
+        if not is_game_interrupted and second_player.can_play():
             try:
                 with time_limit(Constants.STUDENT_FUNCTION_MAX_TIME, "second_player play turn"):
                     turn_player = StudentGamePlayer(create_turn_snapshot(maze), second_player)
@@ -63,6 +64,7 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
                             maze.set_second_player_bomb(second_player.get_location())
                             second_player.reduce_bomb_count()
                             second_bomb_turn_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+            # if student code contains exception handling, it will not work
             except TimeoutException as e:
                 game_status = Constants.GameOptions.SecondPlayerTimeOut
                 is_game_interrupted = True
@@ -165,13 +167,17 @@ def convert_action_to_direction_vector(wanted_action: Action) -> DirectionsVecto
 def convert_map_status_to_numbers_for_ui(maze: GameMap,
                                          first_player: PlayerInGame,
                                          second_player: PlayerInGame) -> numpy.ndarray:
-    map_for_ui = numpy.full((len(maze.get_map()), len(maze.get_map()[0])), fill_value=0, dtype=int)
+
+    map_for_ui = numpy.full((len(maze.get_map()) - Constants.MAZE_WALL_BUFFER * 2,
+                             len(maze.get_map()[0]) - Constants.MAZE_WALL_BUFFER * 2),
+                            fill_value=0,
+                            dtype=int)
     first_bomb_location = maze.get_first_player_bomb()
     second_bomb_location = maze.get_second_player_bomb()
     door_location = maze.get_door_location()
 
-    for row in range(len(maze.get_map())):
-        for column in range(len(maze.get_map()[0])):
+    for row in range(Constants.MAZE_WALL_BUFFER, len(map_for_ui) + Constants.MAZE_WALL_BUFFER):
+        for column in range(Constants.MAZE_WALL_BUFFER, len(map_for_ui) + Constants.MAZE_WALL_BUFFER):
             current_position = (row, column)
             cell_value = ""
 

@@ -1,10 +1,26 @@
 from enum import Enum
 
 
-class ComputerLevels(Enum):
-    Easy = 1
-    Medium = 2
-    Hard = 3
+class MapLevel(Enum):
+    One = "1"
+    Two = "2"
+    Three = "3"
+    Four = "4"
+    Five = "5"
+
+
+class ComputerLevel(Enum):
+    Easy = "Easy"
+    Medium = "Medium"
+    Hard = "Hard"
+
+
+class MapObjectOptions(Enum):
+    Empty = 0
+    Obstacle = 1
+    PlayerOne = 2
+    PlayerTwo = 3
+    Door = 4
 
 
 class DirectionsVector(Enum):
@@ -32,10 +48,14 @@ class TimeoutException(Exception):
 
 
 # Change it on production
-BASE_PATH = r"C:\Ben\Nizanim\GamePlatform\Game-Platform\Server\students_files"
-
+BASE_PATH = r"C:\Ben\Nizanim\GamePlatform\Game-Platform\Server"
+GAME_PATH = "Games"
+MAP_PATH = "Maps"
+COMPUTER_PATH = "ComputerCode"
+INIT_FILE_NAME = "init.py"
 FIRST_PLAYER_MODULE_NAME = "first_player.py"
 SECOND_PLAYER_MODULE_NAME = "second_player.py"
+
 BOMBS_STARTING_AMOUNT = 1
 BOMBS_TURNS_UNTIL_EXPLODE = 3
 HOT_DISTANCE_VALUE = 2
@@ -47,3 +67,5 @@ BOMB_EXPLOSION_FREEZE_TIME = 10
 BOMB_EXPLOSION_DISTANCE = 1
 
 STUDENT_FUNCTION_MAX_TIME = 5
+
+MAZE_WALL_BUFFER = 1
