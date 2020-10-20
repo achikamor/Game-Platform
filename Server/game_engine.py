@@ -28,6 +28,7 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
             else:
                 if first_player.can_drop_bomb():
                     maze.set_first_player_bomb(first_player.get_location())
+                    first_player.reduce_bomb_count()
                     first_bomb_turns_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
         else:
             first_player.wait_turn()
@@ -44,6 +45,7 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
             else:
                 if second_player.can_drop_bomb():
                     maze.set_second_player_bomb(second_player.get_location())
+                    second_player.reduce_bomb_count()
                     second_bomb_turn_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
         else:
             second_player.wait_turn()
@@ -92,7 +94,16 @@ def get_game_status(maze: GameMap,
 
 
 def bomb(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame, bomb_location: (int, int)) -> None:
-    pass
+    # checks if first player is within bomb explosion area
+    if abs(bomb_location[0] - first_player.get_location()[0]) <= 1 and \
+       abs(bomb_location[1] - first_player.get_location()[1]) <= 1:
+        first_player.freeze(Constants.BOMB_EXPLOSION_FREEZE_TIME)
+
+    if abs(bomb_location[0] - second_player.get_location()[0]) <= 1 and \
+       abs(bomb_location[1] - second_player.get_location()[1]) <= 1:
+        second_player.freeze(Constants.BOMB_EXPLOSION_FREEZE_TIME)
+
+    maze.remove_obstacles_area(Constants.BOMB_EXPLOSION_DISTANCE, bomb_location)
 
 
 def create_turn_snapshot(board: GameMap) -> GameMap:

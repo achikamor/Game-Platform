@@ -28,3 +28,15 @@ class GameMap:
 
     def get_map(self):
         return self._map_obstacles
+
+    def remove_obstacles_area(self, explosion_distance: int, bomb_location: (int, int)) -> None:
+        for row in range(bomb_location[0] - explosion_distance, bomb_location[0] + explosion_distance + 1):
+            for column in range(bomb_location[1] - explosion_distance, bomb_location[1] + explosion_distance +1):
+                if row == bomb_location[0] and column == bomb_location[1]:
+                    pass
+                elif self._map_obstacles[row][column] and not self.is_in_outline((row, column)):
+                    self._map_obstacles[row][column] = False
+
+    def is_in_outline(self, location: (int, int)) -> bool:
+        return location[0] <= 0 or location[0] >= len(self._map_obstacles) or \
+            location[1] <= 0 or location[1] >= len(self._map_obstacles[0])

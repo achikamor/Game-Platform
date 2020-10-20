@@ -35,6 +35,9 @@ class PlayerInGame:
     def can_drop_bomb(self) -> bool:
         return self._bombs_left > 0
 
+    def reduce_bomb_count(self) -> None:
+        self._bombs_left -= 1
+
     def can_play(self) -> bool:
         return self._stop_turns_left == 0
 
