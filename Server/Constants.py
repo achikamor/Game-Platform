@@ -20,6 +20,15 @@ class GameOptions(Enum):
     Draw = "draw"
     Loss = "loss"
     Running = "running"
+    FirstPlayerTimeOut = "first_player_time_out"
+    SecondPlayerTimeOut = "Second_player_time_out"
+    FirstPlayerException = "first_player_exception"
+    SecondPlayerException = "second_player_exception"
+
+
+class TimeoutException(Exception):
+    def __init__(self, msg=''):
+        self.msg = msg
 
 
 # Change it on production
@@ -36,3 +45,5 @@ MAX_TURN_PLAYED = 60
 HIT_OBSTACLE_FREEZE_TIME = 5
 BOMB_EXPLOSION_FREEZE_TIME = 10
 BOMB_EXPLOSION_DISTANCE = 1
+
+STUDENT_FUNCTION_MAX_TIME = 5

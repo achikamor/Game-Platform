@@ -6,7 +6,10 @@ from Server.game_map import GameMap
 from Server.player_in_game import PlayerInGame
 from Server.student_game_player import StudentGamePlayer
 from Server.maze_game import Action, Direction
-from Server.Constants import DirectionsVector
+from Server.Constants import DirectionsVector, TimeoutException
+from contextlib import contextmanager
+import threading
+import _thread
 
 
 def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame):
@@ -15,38 +18,59 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
     first_bomb_turns_to_explode = None
     second_bomb_turn_to_explode = None
     game_status = get_game_status(maze, first_player, second_player, current_turn_number)
+    is_game_interrupted = False
     while game_status == Constants.GameOptions.Running:
         if first_player.can_play():
-            turn_player = StudentGamePlayer(create_turn_snapshot(maze), first_player)
-            wanted_action = first_player.play(turn_player)
-            if wanted_action != Action.DROP_BOMB:
-                direction_to_move = convert_action_to_direction_vector(wanted_action)
-                if turn_player.check_movement_with_direction_vector(direction_to_move):
-                    first_player.move(direction_to_move)
-                else:
-                    first_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
-            else:
-                if first_player.can_drop_bomb():
-                    maze.set_first_player_bomb(first_player.get_location())
-                    first_player.reduce_bomb_count()
-                    first_bomb_turns_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+            try:
+                with time_limit(Constants.STUDENT_FUNCTION_MAX_TIME, "first_player play turn"):
+                    turn_player = StudentGamePlayer(create_turn_snapshot(maze), first_player)
+                    wanted_action = first_player.play(turn_player)
+                    if wanted_action != Action.DROP_BOMB:
+                        direction_to_move = convert_action_to_direction_vector(wanted_action)
+                        if turn_player.check_movement_with_direction_vector(direction_to_move):
+                            first_player.move(direction_to_move)
+                        else:
+                            first_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
+                    else:
+                        if first_player.can_drop_bomb():
+                            maze.set_first_player_bomb(first_player.get_location())
+                            first_player.reduce_bomb_count()
+                            first_bomb_turns_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+            except TimeoutException as e:
+                game_status = Constants.GameOptions.FirstPlayerTimeOut
+                is_game_interrupted = True
+                pass
+            except Exception as e:
+                game_status = Constants.GameOptions.FirstPlayerException
+                is_game_interrupted = True
+                pass
         else:
             first_player.wait_turn()
 
         if second_player.can_play():
-            turn_player = StudentGamePlayer(create_turn_snapshot(maze), second_player)
-            wanted_action = second_player.play(turn_player)
-            if wanted_action != Action.DROP_BOMB:
-                direction_to_move = convert_action_to_direction_vector(wanted_action)
-                if turn_player.check_movement_with_direction_vector(direction_to_move):
-                    second_player.move(direction_to_move)
-                else:
-                    second_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
-            else:
-                if second_player.can_drop_bomb():
-                    maze.set_second_player_bomb(second_player.get_location())
-                    second_player.reduce_bomb_count()
-                    second_bomb_turn_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+            try:
+                with time_limit(Constants.STUDENT_FUNCTION_MAX_TIME, "second_player play turn"):
+                    turn_player = StudentGamePlayer(create_turn_snapshot(maze), second_player)
+                    wanted_action = second_player.play(turn_player)
+                    if wanted_action != Action.DROP_BOMB:
+                        direction_to_move = convert_action_to_direction_vector(wanted_action)
+                        if turn_player.check_movement_with_direction_vector(direction_to_move):
+                            second_player.move(direction_to_move)
+                        else:
+                            second_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
+                    else:
+                        if second_player.can_drop_bomb():
+                            maze.set_second_player_bomb(second_player.get_location())
+                            second_player.reduce_bomb_count()
+                            second_bomb_turn_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+            except TimeoutException as e:
+                game_status = Constants.GameOptions.SecondPlayerTimeOut
+                is_game_interrupted = True
+                pass
+            except Exception as e:
+                game_status = Constants.GameOptions.SecondPlayerException
+                is_game_interrupted = True
+                pass
         else:
             second_player.wait_turn()
 
@@ -68,7 +92,8 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
 
         maze_for_ui = convert_map_status_to_numbers_for_ui(maze, first_player, second_player)
         current_turn_number += 1
-        game_status = get_game_status(maze, first_player, second_player, current_turn_number)
+        if not is_game_interrupted:
+            game_status = get_game_status(maze, first_player, second_player, current_turn_number)
         current_turn = [maze_for_ui, not first_player.can_play(), not second_player.can_play(), game_status.value]
         game_turns.append(current_turn)
 
@@ -108,10 +133,6 @@ def bomb(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame,
 
 def create_turn_snapshot(board: GameMap) -> GameMap:
     return copy.deepcopy(board)
-
-
-def delete_game(directory_path: str) -> None:
-    pass
 
 
 def convert_direction_to_direction_vector(direction: Direction) -> DirectionsVector:
@@ -170,3 +191,16 @@ def convert_map_status_to_numbers_for_ui(maze: GameMap,
             map_for_ui[row][column] = int(cell_value, 2)
 
     return map_for_ui
+
+
+@contextmanager
+def time_limit(seconds, msg=''):
+    timer = threading.Timer(seconds, lambda: _thread.interrupt_main())
+    timer.start()
+    try:
+        yield
+    except KeyboardInterrupt:
+        raise TimeoutException("Timed out for {}".format(msg))
+    finally:
+        # if the action ends in specified time, timer is canceled
+        timer.cancel()
