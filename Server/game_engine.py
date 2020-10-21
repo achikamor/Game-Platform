@@ -1,12 +1,12 @@
 import numpy
-from Server import Constants
 import logging
 import copy
-from Server.game_map import GameMap
-from Server.player_in_game import PlayerInGame
-from Server.student_game_player import StudentGamePlayer
-from Server.maze_game import Action, Direction
-from Server.Constants import DirectionsVector, TimeoutException
+import Constants
+from game_map import GameMap
+from player_in_game import PlayerInGame
+from student_game_player import StudentGamePlayer
+from maze_game import Action, Direction
+from Constants import DirectionsVector, TimeoutException
 from contextlib import contextmanager
 import threading
 import _thread

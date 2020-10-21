@@ -1,10 +1,10 @@
-from Server.maze_game import Direction, BaseGamePlayer, DoorDistanceStatus
-from Server.player_in_game import PlayerInGame
-from Server.game_map import GameMap
-from Server import Constants, game_engine
+from maze_game import Direction, BaseGamePlayer, DoorDistanceStatus
+from player_in_game import PlayerInGame
+from game_map import GameMap
+import Constants, game_engine
 import logging
 import math
-from Server.Constants import DirectionsVector
+from Constants import DirectionsVector
 
 
 class StudentGamePlayer(BaseGamePlayer):

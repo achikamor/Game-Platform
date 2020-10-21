@@ -1,14 +1,13 @@
-from Server.maze_game import Action, Direction
-from Server.Constants import DirectionsVector
-from Server import Constants
+from maze_game import Action, Direction, BaseGamePlayer
+from Constants import DirectionsVector
+import Constants
 import logging
 import numpy
-from Server.maze_game import BaseGamePlayer
-from Server import game_engine
+import game_engine
 
 
 class PlayerInGame:
-    def __init__(self, player_code: callable()):
+    def __init__(self, player_code: callable):
         self._play_turn = player_code
         self._bombs_left = Constants.BOMBS_STARTING_AMOUNT
         self._visited_cells = None

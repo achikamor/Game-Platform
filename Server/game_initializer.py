@@ -1,12 +1,12 @@
-from Server.player_in_game import PlayerInGame
-from Server.game_map import GameMap
+from player_in_game import PlayerInGame
+from game_map import GameMap
 import shutil
 import os
 from typing import Tuple
 import uuid
 import random
 from werkzeug.utils import secure_filename
-from Server import Constants
+import Constants
 import importlib.util
 import numpy
 
@@ -44,7 +44,10 @@ def init_game(map_file_path: str,
         lines = file.read().splitlines()
         map_obstacles = numpy.full((len(lines) + Constants.MAZE_WALL_BUFFER * 2,
                                    len(lines) + Constants.MAZE_WALL_BUFFER * 2),
-                                   fill_value=False)
+                                   fill_value=True)
+        map_obstacles[Constants.MAZE_WALL_BUFFER:len(lines) + Constants.MAZE_WALL_BUFFER,
+        Constants.MAZE_WALL_BUFFER:len(lines) + Constants.MAZE_WALL_BUFFER] = \
+            numpy.full((len(lines), len(lines)), fill_value=False)
         curr_row = Constants.MAZE_WALL_BUFFER
         door_options = []
         player_one_options = []
@@ -53,13 +56,13 @@ def init_game(map_file_path: str,
             values = curr_line.split(" ")
             curr_column = Constants.MAZE_WALL_BUFFER
             for curr_value in range(len(values)):
-                if curr_value == Constants.MapObjectOptions.Obstacle.value:
+                if values[curr_value] == Constants.MapObjectOptions.Obstacle.value:
                     map_obstacles[curr_row][curr_column] = True
-                elif curr_value == Constants.MapObjectOptions.PlayerOne.value:
+                elif values[curr_value] == Constants.MapObjectOptions.PlayerOne.value:
                     player_one_options.append((curr_row, curr_column))
-                elif curr_value == Constants.MapObjectOptions.PlayerTwo.value:
+                elif values[curr_value] == Constants.MapObjectOptions.PlayerTwo.value:
                     player_two_options.append((curr_row, curr_column))
-                elif curr_value == Constants.MapObjectOptions.Door:
+                elif values[curr_value] == Constants.MapObjectOptions.Door.value:
                     door_options.append((curr_row, curr_column))
 
                 curr_column += 1

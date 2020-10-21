@@ -1,7 +1,6 @@
 from typing import List
 import numpy
 
-
 class GameMap:
     def __init__(self, game_map: numpy.ndarray, door_location: (int, int)):
         self._map_obstacles = game_map

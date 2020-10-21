@@ -16,11 +16,11 @@ class ComputerLevel(Enum):
 
 
 class MapObjectOptions(Enum):
-    Empty = 0
-    Obstacle = 1
-    PlayerOne = 2
-    PlayerTwo = 3
-    Door = 4
+    Empty = "0"
+    Obstacle = "1"
+    PlayerOne = "2"
+    PlayerTwo = "3"
+    Door = "4"
 
 
 class DirectionsVector(Enum):
