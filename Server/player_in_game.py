@@ -25,8 +25,8 @@ class PlayerInGame:
         return self._position
 
     def move(self, direction: Constants.DirectionsVector) -> None:
-        self.set_location((self._position[0] + direction[0], self._position[1] + direction[1]))
         self.set_cell_as_visited(self._position)
+        self.set_location((self._position[0] + direction[0], self._position[1] + direction[1]))
 
     def set_cell_as_visited(self, cell_location: (int, int)) -> None:
         self._visited_cells[cell_location[0]][cell_location[1]] = True

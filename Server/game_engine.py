@@ -20,16 +20,23 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
     game_status = get_game_status(maze, first_player, second_player, current_turn_number)
     is_game_interrupted = False
     while game_status == Constants.GameOptions.Running:
+        logging.info("trying to play turn number : " + str(current_turn_number))
+        logging.info("first player location is :" + str(first_player.get_location()))
+        logging.info("second player location is :" + str(second_player.get_location()))
+
         if first_player.can_play():
             try:
                 with time_limit(Constants.STUDENT_FUNCTION_MAX_TIME, "first_player play turn"):
                     turn_player = StudentGamePlayer(create_turn_snapshot(maze), first_player)
                     wanted_action = first_player.play(turn_player)
+                    logging.info("player one trying to move "+ str(wanted_action.value))
                     if wanted_action != Action.DROP_BOMB:
                         direction_to_move = convert_action_to_direction_vector(wanted_action)
                         if turn_player.check_movement_with_direction_vector(direction_to_move):
+                            logging.info("player one moved " + str(wanted_action.value) + " successfully")
                             first_player.move(direction_to_move)
                         else:
+                            logging.info("first player freeze")
                             first_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
                     else:
                         if first_player.can_drop_bomb():
@@ -44,6 +51,7 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
             except Exception as e:
                 game_status = Constants.GameOptions.FirstPlayerException
                 is_game_interrupted = True
+                logging.error("first player got exception : " + str(e))
                 pass
         else:
             first_player.wait_turn()
@@ -53,11 +61,14 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
                 with time_limit(Constants.STUDENT_FUNCTION_MAX_TIME, "second_player play turn"):
                     turn_player = StudentGamePlayer(create_turn_snapshot(maze), second_player)
                     wanted_action = second_player.play(turn_player)
+                    logging.info("player two trying to move "+ str(wanted_action.value))
                     if wanted_action != Action.DROP_BOMB:
                         direction_to_move = convert_action_to_direction_vector(wanted_action)
                         if turn_player.check_movement_with_direction_vector(direction_to_move):
                             second_player.move(direction_to_move)
+                            logging.info("player two moved " + str(wanted_action.value) + " successfully")
                         else:
+                            logging.info("second player freeze")
                             second_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
                     else:
                         if second_player.can_drop_bomb():
@@ -72,6 +83,7 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
             except Exception as e:
                 game_status = Constants.GameOptions.SecondPlayerException
                 is_game_interrupted = True
+                logging.error("second player got exception : " + str(e))
                 pass
         else:
             second_player.wait_turn()
@@ -93,6 +105,12 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
                 second_bomb_turn_to_explode -= 1
 
         maze_for_ui = convert_map_status_to_numbers_for_ui(maze, first_player, second_player)
+
+        logging.info("finish to play turn number : " + str(current_turn_number))
+        logging.info("first player location is :" + str(first_player.get_location()))
+        logging.info("second player location is :" + str(second_player.get_location()))
+        logging.info("door location is " + str(maze.get_door_location()))
+        logging.info("map  is " + str(maze_for_ui))
         current_turn_number += 1
         if not is_game_interrupted:
             game_status = get_game_status(maze, first_player, second_player, current_turn_number)
@@ -166,10 +184,11 @@ def convert_action_to_direction_vector(wanted_action: Action) -> DirectionsVecto
 
 def convert_map_status_to_numbers_for_ui(maze: GameMap,
                                          first_player: PlayerInGame,
-                                         second_player: PlayerInGame) -> numpy.ndarray:
+                                         second_player: PlayerInGame):
 
+    logging.info("trying to convert current map for ui")
     map_for_ui = numpy.full((len(maze.get_map()) - Constants.MAZE_WALL_BUFFER * 2,
-                             len(maze.get_map()[0]) - Constants.MAZE_WALL_BUFFER * 2),
+                             len(maze.get_map()) - Constants.MAZE_WALL_BUFFER * 2),
                             fill_value=0,
                             dtype=int)
     first_bomb_location = maze.get_first_player_bomb()
@@ -194,9 +213,9 @@ def convert_map_status_to_numbers_for_ui(maze: GameMap,
             cell_value += "1" if door_location == current_position else "0"
 
             # convert from binary to int
-            map_for_ui[row][column] = int(cell_value, 2)
+            map_for_ui[row - Constants.MAZE_WALL_BUFFER][column - Constants.MAZE_WALL_BUFFER] = int(cell_value, 2)
 
-    return map_for_ui
+    return map_for_ui.tolist()
 
 
 @contextmanager

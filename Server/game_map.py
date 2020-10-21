@@ -1,5 +1,6 @@
 from typing import List
 import numpy
+import logging
 
 class GameMap:
     def __init__(self, game_map: numpy.ndarray, door_location: (int, int)):
@@ -24,7 +25,7 @@ class GameMap:
         self._second_player_bomb_location = bomb_location
 
     def is_free_to_move(self, location: (int, int)) -> bool:
-        return self._map_obstacles[location[0]][location[1]]
+        return not self._map_obstacles[location[0]][location[1]]
 
     def get_map(self):
         return self._map_obstacles

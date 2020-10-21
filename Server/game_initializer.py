@@ -75,6 +75,8 @@ def init_game(map_file_path: str,
     first_player.set_location(player_one_location)
     second_player.set_location(player_two_location)
     maze = GameMap(map_obstacles, door_location)
+    first_player.init_visited_cells_matrix(len(map_obstacles))
+    second_player.init_visited_cells_matrix(len(map_obstacles))
 
     return maze, first_player, second_player
 

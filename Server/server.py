@@ -31,7 +31,8 @@ def run_maze():
         #game_initializer.delete_game(directory_name)
 
     logging.info("finish to run the game")
-    return jsonify(game_turns)
+    logging.info("turns send to server are " + str(game_turns))
+    return jsonify({"game_turns": game_turns})
 
 
 def run_mock(map_path: str):
