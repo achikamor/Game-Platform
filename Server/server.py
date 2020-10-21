@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(format='%(asctime)s :: %(levelname)s :: %(funcName)s :: %(lineno)d :: %(message)s',level=logging.INFO, filename="log.txt")
 
 
-@app.route('/')
+@app.route('/game')
 def run_maze():
     logging.info("got a call to route : run maze")
     #if request.method == "POST":
