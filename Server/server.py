@@ -4,7 +4,7 @@ import game_engine
 import Constants, game_initializer
 import os
 
-app = Flask(__name__, template_folder=r"C:\Ben\Nizanim\GamePlatform\Game-Platform\Client\public")
+app = Flask(__name__, template_folder=r"C:\Ben\Nizanim\GamePlatform\Game-Platform\final_game\public")
 logger = logging.getLogger(__name__)
 logging.basicConfig(format='%(asctime)s :: %(levelname)s :: %(funcName)s :: %(lineno)d :: %(message)s',level=logging.INFO, filename="log.txt")
 
