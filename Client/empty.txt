@@ -1,9 +1,0 @@
-
-כדי להריץ את צד הלקוח צריך:
-
-1)node version 12.13 at least
-2)download all client folder to your pc
-3)open terminal in that folder in your pc
-4)write <npm start> then press enter
-5)a browser supposed to appear, with localhost:3000 open.
-6)press "play next move" to see the result.
