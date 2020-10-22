@@ -26,6 +26,7 @@ class PlayerInGame:
 
     def move(self, direction: Constants.DirectionsVector) -> None:
         self.set_cell_as_visited(self._position)
+        # add last move - opposite
         self.set_location((self._position[0] + direction[0], self._position[1] + direction[1]))
 
     def set_cell_as_visited(self, cell_location: (int, int)) -> None:
@@ -59,3 +60,5 @@ class PlayerInGame:
 
     def play(self, player: BaseGamePlayer) -> Action:
         return self._play_turn(player)
+
+

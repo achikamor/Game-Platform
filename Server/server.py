@@ -12,6 +12,8 @@ logging.basicConfig(format='%(asctime)s :: %(levelname)s :: %(funcName)s :: %(li
 @app.route('/game')
 def run_maze():
     logging.info("got a call to route : run maze")
+    logging.info("got request from client")
+    logging.info("request data is " + str(request.data))
     #if request.method == "POST":
     # files = request.files['file']
     # directory_name = game_initializer.create_game_directory(os.path.join(Constants.BASE_PATH, Constants.GAME_PATH))
