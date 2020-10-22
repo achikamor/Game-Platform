@@ -1,13 +1,16 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import logging
 import game_engine
 import Constants, game_initializer
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=r"C:\Ben\Nizanim\GamePlatform\Game-Platform\Client\public")
 logger = logging.getLogger(__name__)
 logging.basicConfig(format='%(asctime)s :: %(levelname)s :: %(funcName)s :: %(lineno)d :: %(message)s',level=logging.INFO, filename="log.txt")
 
+@app.route("/")
+def hello():
+    return render_template("index.html")
 
 @app.route('/game')
 def run_maze():
