@@ -1,63 +1,494 @@
-2020-10-21 16:10:08,582 :: INFO :: <module> :: 45 :: welcome to my flask server
-2020-10-21 16:10:08,602 :: INFO :: _log :: 113 ::  * Restarting with stat
-2020-10-21 16:10:09,007 :: INFO :: <module> :: 45 :: welcome to my flask server
-2020-10-21 16:10:09,022 :: WARNING :: _log :: 113 ::  * Debugger is active!
-2020-10-21 16:10:09,022 :: INFO :: _log :: 113 ::  * Debugger PIN: 198-098-616
-2020-10-21 16:10:09,022 :: INFO :: _log :: 113 ::  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2020-10-21 16:10:15,267 :: INFO :: run_maze :: 14 :: got a call to route : run maze
-2020-10-21 16:10:15,270 :: INFO :: play_game :: 23 :: trying to play turn number : 0
-2020-10-21 16:10:15,270 :: INFO :: play_game :: 24 :: first player location is :(2, 2)
-2020-10-21 16:10:15,270 :: INFO :: play_game :: 25 :: second player location is :(3, 2)
-2020-10-21 16:10:15,271 :: INFO :: play_game :: 32 :: player one trying to move down
-2020-10-21 16:10:15,271 :: INFO :: play_game :: 36 :: player one moved down successfully
-2020-10-21 16:10:15,272 :: INFO :: play_game :: 64 :: player two trying to move up
-2020-10-21 16:10:15,272 :: INFO :: play_game :: 69 :: player two moved up successfully
-2020-10-21 16:10:15,272 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
-2020-10-21 16:10:15,273 :: INFO :: play_game :: 109 :: finish to play turn number : 0
-2020-10-21 16:10:15,273 :: INFO :: play_game :: 110 :: first player location is :(3, 2)
-2020-10-21 16:10:15,273 :: INFO :: play_game :: 111 :: second player location is :(2, 2)
-2020-10-21 16:10:15,273 :: INFO :: play_game :: 112 :: door location is (4, 3)
-2020-10-21 16:10:15,273 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32], [32, 8, 0, 32], [32, 16, 0, 32], [32, 32, 1, 32]]
-2020-10-21 16:10:15,273 :: INFO :: play_game :: 23 :: trying to play turn number : 1
-2020-10-21 16:10:15,273 :: INFO :: play_game :: 24 :: first player location is :(3, 2)
-2020-10-21 16:10:15,273 :: INFO :: play_game :: 25 :: second player location is :(2, 2)
-2020-10-21 16:10:15,274 :: INFO :: play_game :: 32 :: player one trying to move right
-2020-10-21 16:10:15,274 :: INFO :: play_game :: 36 :: player one moved right successfully
-2020-10-21 16:10:15,275 :: INFO :: play_game :: 64 :: player two trying to move right
-2020-10-21 16:10:15,275 :: INFO :: play_game :: 69 :: player two moved right successfully
-2020-10-21 16:10:15,275 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
-2020-10-21 16:10:15,275 :: INFO :: play_game :: 109 :: finish to play turn number : 1
-2020-10-21 16:10:15,275 :: INFO :: play_game :: 110 :: first player location is :(3, 3)
-2020-10-21 16:10:15,275 :: INFO :: play_game :: 111 :: second player location is :(2, 3)
-2020-10-21 16:10:15,276 :: INFO :: play_game :: 112 :: door location is (4, 3)
-2020-10-21 16:10:15,276 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32], [32, 0, 8, 32], [32, 0, 16, 32], [32, 32, 1, 32]]
-2020-10-21 16:10:15,276 :: INFO :: play_game :: 23 :: trying to play turn number : 2
-2020-10-21 16:10:15,276 :: INFO :: play_game :: 24 :: first player location is :(3, 3)
-2020-10-21 16:10:15,276 :: INFO :: play_game :: 25 :: second player location is :(2, 3)
-2020-10-21 16:10:15,277 :: INFO :: play_game :: 32 :: player one trying to move up
-2020-10-21 16:10:15,277 :: INFO :: play_game :: 36 :: player one moved up successfully
-2020-10-21 16:10:15,278 :: INFO :: play_game :: 64 :: player two trying to move down
-2020-10-21 16:10:15,278 :: INFO :: play_game :: 69 :: player two moved down successfully
-2020-10-21 16:10:15,278 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
-2020-10-21 16:10:15,278 :: INFO :: play_game :: 109 :: finish to play turn number : 2
-2020-10-21 16:10:15,278 :: INFO :: play_game :: 110 :: first player location is :(2, 3)
-2020-10-21 16:10:15,278 :: INFO :: play_game :: 111 :: second player location is :(3, 3)
-2020-10-21 16:10:15,278 :: INFO :: play_game :: 112 :: door location is (4, 3)
-2020-10-21 16:10:15,279 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32], [32, 0, 16, 32], [32, 0, 8, 32], [32, 32, 1, 32]]
-2020-10-21 16:10:15,279 :: INFO :: play_game :: 23 :: trying to play turn number : 3
-2020-10-21 16:10:15,279 :: INFO :: play_game :: 24 :: first player location is :(2, 3)
-2020-10-21 16:10:15,279 :: INFO :: play_game :: 25 :: second player location is :(3, 3)
-2020-10-21 16:10:15,281 :: INFO :: play_game :: 32 :: player one trying to move right
-2020-10-21 16:10:15,281 :: INFO :: play_game :: 39 :: first player freeze
-2020-10-21 16:10:15,282 :: INFO :: play_game :: 64 :: player two trying to move down
-2020-10-21 16:10:15,282 :: INFO :: play_game :: 69 :: player two moved down successfully
-2020-10-21 16:10:15,282 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
-2020-10-21 16:10:15,282 :: INFO :: play_game :: 109 :: finish to play turn number : 3
-2020-10-21 16:10:15,283 :: INFO :: play_game :: 110 :: first player location is :(2, 3)
-2020-10-21 16:10:15,283 :: INFO :: play_game :: 111 :: second player location is :(4, 3)
-2020-10-21 16:10:15,283 :: INFO :: play_game :: 112 :: door location is (4, 3)
-2020-10-21 16:10:15,283 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32], [32, 0, 16, 32], [32, 0, 0, 32], [32, 32, 9, 32]]
-2020-10-21 16:10:15,283 :: INFO :: run_maze :: 33 :: finish to run the game
-2020-10-21 16:10:15,283 :: INFO :: run_maze :: 34 :: turns send to server are [[[[32, 32, 32, 32], [32, 8, 0, 32], [32, 16, 0, 32], [32, 32, 1, 32]], False, False, 'running'], [[[32, 32, 32, 32], [32, 0, 8, 32], [32, 0, 16, 32], [32, 32, 1, 32]], False, False, 'running'], [[[32, 32, 32, 32], [32, 0, 16, 32], [32, 0, 8, 32], [32, 32, 1, 32]], False, False, 'running'], [[[32, 32, 32, 32], [32, 0, 16, 32], [32, 0, 0, 32], [32, 32, 9, 32]], True, False, 'second_player']]
-2020-10-21 16:10:15,284 :: INFO :: _log :: 113 :: 127.0.0.1 - - [21/Oct/2020 16:10:15] "[37mGET / HTTP/1.1[0m" 200 -
-2020-10-21 16:10:15,417 :: INFO :: _log :: 113 :: 127.0.0.1 - - [21/Oct/2020 16:10:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2020-10-21 16:18:42,477 :: INFO :: <module> :: 45 :: welcome to my flask server
+2020-10-21 16:18:42,492 :: INFO :: _log :: 113 ::  * Restarting with stat
+2020-10-21 16:18:42,922 :: INFO :: <module> :: 45 :: welcome to my flask server
+2020-10-21 16:18:42,931 :: WARNING :: _log :: 113 ::  * Debugger is active!
+2020-10-21 16:18:42,936 :: INFO :: _log :: 113 ::  * Debugger PIN: 198-098-616
+2020-10-21 16:18:42,950 :: INFO :: _log :: 113 ::  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-10-21 16:18:46,833 :: INFO :: _log :: 113 :: 127.0.0.1 - - [21/Oct/2020 16:18:46] "[33mGET / HTTP/1.1[0m" 404 -
+2020-10-21 16:18:50,286 :: INFO :: run_maze :: 14 :: got a call to route : run maze
+2020-10-21 16:18:50,289 :: INFO :: play_game :: 23 :: trying to play turn number : 0
+2020-10-21 16:18:50,289 :: INFO :: play_game :: 24 :: first player location is :(4, 2)
+2020-10-21 16:18:50,290 :: INFO :: play_game :: 25 :: second player location is :(2, 6)
+2020-10-21 16:18:50,290 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,290 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,291 :: INFO :: play_game :: 64 :: player two trying to move left
+2020-10-21 16:18:50,291 :: INFO :: play_game :: 69 :: player two moved left successfully
+2020-10-21 16:18:50,291 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,292 :: INFO :: play_game :: 109 :: finish to play turn number : 0
+2020-10-21 16:18:50,292 :: INFO :: play_game :: 110 :: first player location is :(3, 2)
+2020-10-21 16:18:50,292 :: INFO :: play_game :: 111 :: second player location is :(2, 5)
+2020-10-21 16:18:50,292 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,292 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 8, 0, 0, 0, 0, 32], [32, 16, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,292 :: INFO :: play_game :: 23 :: trying to play turn number : 1
+2020-10-21 16:18:50,292 :: INFO :: play_game :: 24 :: first player location is :(3, 2)
+2020-10-21 16:18:50,292 :: INFO :: play_game :: 25 :: second player location is :(2, 5)
+2020-10-21 16:18:50,293 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,293 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,294 :: INFO :: play_game :: 64 :: player two trying to move left
+2020-10-21 16:18:50,294 :: INFO :: play_game :: 69 :: player two moved left successfully
+2020-10-21 16:18:50,294 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,294 :: INFO :: play_game :: 109 :: finish to play turn number : 1
+2020-10-21 16:18:50,294 :: INFO :: play_game :: 110 :: first player location is :(2, 2)
+2020-10-21 16:18:50,294 :: INFO :: play_game :: 111 :: second player location is :(2, 4)
+2020-10-21 16:18:50,294 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,295 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 16, 0, 8, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,295 :: INFO :: play_game :: 23 :: trying to play turn number : 2
+2020-10-21 16:18:50,295 :: INFO :: play_game :: 24 :: first player location is :(2, 2)
+2020-10-21 16:18:50,295 :: INFO :: play_game :: 25 :: second player location is :(2, 4)
+2020-10-21 16:18:50,295 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,295 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,295 :: INFO :: play_game :: 64 :: player two trying to move left
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 69 :: player two moved left successfully
+2020-10-21 16:18:50,296 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 109 :: finish to play turn number : 2
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 110 :: first player location is :(2, 3)
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 111 :: second player location is :(2, 3)
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 24, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 23 :: trying to play turn number : 3
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 24 :: first player location is :(2, 3)
+2020-10-21 16:18:50,296 :: INFO :: play_game :: 25 :: second player location is :(2, 3)
+2020-10-21 16:18:50,297 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,297 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,297 :: INFO :: play_game :: 64 :: player two trying to move left
+2020-10-21 16:18:50,297 :: INFO :: play_game :: 69 :: player two moved left successfully
+2020-10-21 16:18:50,297 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,297 :: INFO :: play_game :: 109 :: finish to play turn number : 3
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 110 :: first player location is :(2, 4)
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 111 :: second player location is :(2, 2)
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 8, 0, 16, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 23 :: trying to play turn number : 4
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 24 :: first player location is :(2, 4)
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 25 :: second player location is :(2, 2)
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,298 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 64 :: player two trying to move down
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 69 :: player two moved down successfully
+2020-10-21 16:18:50,299 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 109 :: finish to play turn number : 4
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 110 :: first player location is :(2, 5)
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 111 :: second player location is :(3, 2)
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 16, 0, 0, 0, 0, 32], [32, 8, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 23 :: trying to play turn number : 5
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 24 :: first player location is :(2, 5)
+2020-10-21 16:18:50,299 :: INFO :: play_game :: 25 :: second player location is :(3, 2)
+2020-10-21 16:18:50,300 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,300 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,300 :: INFO :: play_game :: 64 :: player two trying to move down
+2020-10-21 16:18:50,300 :: INFO :: play_game :: 69 :: player two moved down successfully
+2020-10-21 16:18:50,300 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,300 :: INFO :: play_game :: 109 :: finish to play turn number : 5
+2020-10-21 16:18:50,300 :: INFO :: play_game :: 110 :: first player location is :(2, 6)
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 111 :: second player location is :(4, 2)
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 16, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 8, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 23 :: trying to play turn number : 6
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 24 :: first player location is :(2, 6)
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 25 :: second player location is :(4, 2)
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 64 :: player two trying to move down
+2020-10-21 16:18:50,301 :: INFO :: play_game :: 69 :: player two moved down successfully
+2020-10-21 16:18:50,302 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 109 :: finish to play turn number : 6
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 110 :: first player location is :(2, 7)
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 16, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 23 :: trying to play turn number : 7
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 24 :: first player location is :(2, 7)
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,302 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,303 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,303 :: INFO :: play_game :: 64 :: player two trying to move right
+2020-10-21 16:18:50,303 :: INFO :: play_game :: 71 :: second player freeze
+2020-10-21 16:18:50,303 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,303 :: INFO :: play_game :: 109 :: finish to play turn number : 7
+2020-10-21 16:18:50,303 :: INFO :: play_game :: 110 :: first player location is :(2, 8)
+2020-10-21 16:18:50,303 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,303 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,303 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 16, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,304 :: INFO :: play_game :: 23 :: trying to play turn number : 8
+2020-10-21 16:18:50,304 :: INFO :: play_game :: 24 :: first player location is :(2, 8)
+2020-10-21 16:18:50,304 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,304 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,304 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,304 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,305 :: INFO :: play_game :: 109 :: finish to play turn number : 8
+2020-10-21 16:18:50,305 :: INFO :: play_game :: 110 :: first player location is :(2, 9)
+2020-10-21 16:18:50,305 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,305 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,305 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 16, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,305 :: INFO :: play_game :: 23 :: trying to play turn number : 9
+2020-10-21 16:18:50,305 :: INFO :: play_game :: 24 :: first player location is :(2, 9)
+2020-10-21 16:18:50,305 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,306 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,307 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,307 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,307 :: INFO :: play_game :: 109 :: finish to play turn number : 9
+2020-10-21 16:18:50,307 :: INFO :: play_game :: 110 :: first player location is :(3, 9)
+2020-10-21 16:18:50,307 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,307 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,308 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 16, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,308 :: INFO :: play_game :: 23 :: trying to play turn number : 10
+2020-10-21 16:18:50,308 :: INFO :: play_game :: 24 :: first player location is :(3, 9)
+2020-10-21 16:18:50,308 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,308 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,308 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,308 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 109 :: finish to play turn number : 10
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 110 :: first player location is :(4, 9)
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 16, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 23 :: trying to play turn number : 11
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 24 :: first player location is :(4, 9)
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,309 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,310 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 109 :: finish to play turn number : 11
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 110 :: first player location is :(5, 9)
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 16, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 23 :: trying to play turn number : 12
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 24 :: first player location is :(5, 9)
+2020-10-21 16:18:50,310 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,311 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 109 :: finish to play turn number : 12
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 110 :: first player location is :(6, 9)
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 16, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 23 :: trying to play turn number : 13
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 24 :: first player location is :(6, 9)
+2020-10-21 16:18:50,311 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,312 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,312 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,312 :: INFO :: play_game :: 64 :: player two trying to move right
+2020-10-21 16:18:50,312 :: INFO :: play_game :: 71 :: second player freeze
+2020-10-21 16:18:50,312 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,312 :: INFO :: play_game :: 109 :: finish to play turn number : 13
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 110 :: first player location is :(7, 9)
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 16, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 23 :: trying to play turn number : 14
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 24 :: first player location is :(7, 9)
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,313 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,313 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 109 :: finish to play turn number : 14
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 110 :: first player location is :(8, 9)
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 16, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 23 :: trying to play turn number : 15
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 24 :: first player location is :(8, 9)
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,314 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,314 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 109 :: finish to play turn number : 15
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 110 :: first player location is :(9, 9)
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 16, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 23 :: trying to play turn number : 16
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 24 :: first player location is :(9, 9)
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,315 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,316 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 109 :: finish to play turn number : 16
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 110 :: first player location is :(9, 8)
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 16, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 23 :: trying to play turn number : 17
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 24 :: first player location is :(9, 8)
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,316 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,317 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 109 :: finish to play turn number : 17
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 110 :: first player location is :(9, 7)
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 16, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 23 :: trying to play turn number : 18
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 24 :: first player location is :(9, 7)
+2020-10-21 16:18:50,317 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,318 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 109 :: finish to play turn number : 18
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 110 :: first player location is :(9, 6)
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 16, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 23 :: trying to play turn number : 19
+2020-10-21 16:18:50,318 :: INFO :: play_game :: 24 :: first player location is :(9, 6)
+2020-10-21 16:18:50,319 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,319 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,319 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,319 :: INFO :: play_game :: 64 :: player two trying to move right
+2020-10-21 16:18:50,319 :: INFO :: play_game :: 71 :: second player freeze
+2020-10-21 16:18:50,319 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 109 :: finish to play turn number : 19
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 110 :: first player location is :(9, 5)
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 16, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 23 :: trying to play turn number : 20
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 24 :: first player location is :(9, 5)
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,320 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,320 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,321 :: INFO :: play_game :: 109 :: finish to play turn number : 20
+2020-10-21 16:18:50,321 :: INFO :: play_game :: 110 :: first player location is :(8, 5)
+2020-10-21 16:18:50,321 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,321 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,321 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 16, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,321 :: INFO :: play_game :: 23 :: trying to play turn number : 21
+2020-10-21 16:18:50,321 :: INFO :: play_game :: 24 :: first player location is :(8, 5)
+2020-10-21 16:18:50,321 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,322 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,322 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,323 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,323 :: INFO :: play_game :: 109 :: finish to play turn number : 21
+2020-10-21 16:18:50,323 :: INFO :: play_game :: 110 :: first player location is :(7, 5)
+2020-10-21 16:18:50,323 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,323 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,324 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 16, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,324 :: INFO :: play_game :: 23 :: trying to play turn number : 22
+2020-10-21 16:18:50,324 :: INFO :: play_game :: 24 :: first player location is :(7, 5)
+2020-10-21 16:18:50,324 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,324 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,324 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,325 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,325 :: INFO :: play_game :: 109 :: finish to play turn number : 22
+2020-10-21 16:18:50,325 :: INFO :: play_game :: 110 :: first player location is :(7, 6)
+2020-10-21 16:18:50,325 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,325 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,325 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 16, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,325 :: INFO :: play_game :: 23 :: trying to play turn number : 23
+2020-10-21 16:18:50,325 :: INFO :: play_game :: 24 :: first player location is :(7, 6)
+2020-10-21 16:18:50,325 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 32 :: player one trying to move right
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 36 :: player one moved right successfully
+2020-10-21 16:18:50,326 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 109 :: finish to play turn number : 23
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 110 :: first player location is :(7, 7)
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 16, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 23 :: trying to play turn number : 24
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 24 :: first player location is :(7, 7)
+2020-10-21 16:18:50,326 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,327 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 109 :: finish to play turn number : 24
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 110 :: first player location is :(6, 7)
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 16, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 23 :: trying to play turn number : 25
+2020-10-21 16:18:50,327 :: INFO :: play_game :: 24 :: first player location is :(6, 7)
+2020-10-21 16:18:50,328 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,328 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,328 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,328 :: INFO :: play_game :: 64 :: player two trying to move right
+2020-10-21 16:18:50,328 :: INFO :: play_game :: 71 :: second player freeze
+2020-10-21 16:18:50,328 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 109 :: finish to play turn number : 25
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 110 :: first player location is :(5, 7)
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 16, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 23 :: trying to play turn number : 26
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 24 :: first player location is :(5, 7)
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,329 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,330 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,330 :: INFO :: play_game :: 109 :: finish to play turn number : 26
+2020-10-21 16:18:50,330 :: INFO :: play_game :: 110 :: first player location is :(4, 7)
+2020-10-21 16:18:50,330 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,330 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,330 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 16, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,330 :: INFO :: play_game :: 23 :: trying to play turn number : 27
+2020-10-21 16:18:50,330 :: INFO :: play_game :: 24 :: first player location is :(4, 7)
+2020-10-21 16:18:50,330 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,331 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 109 :: finish to play turn number : 27
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 110 :: first player location is :(4, 6)
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 16, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 23 :: trying to play turn number : 28
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 24 :: first player location is :(4, 6)
+2020-10-21 16:18:50,331 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,332 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 109 :: finish to play turn number : 28
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 110 :: first player location is :(4, 5)
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 16, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 23 :: trying to play turn number : 29
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 24 :: first player location is :(4, 5)
+2020-10-21 16:18:50,332 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,333 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 109 :: finish to play turn number : 29
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 110 :: first player location is :(4, 4)
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 16, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 23 :: trying to play turn number : 30
+2020-10-21 16:18:50,333 :: INFO :: play_game :: 24 :: first player location is :(4, 4)
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,334 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 109 :: finish to play turn number : 30
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 110 :: first player location is :(5, 4)
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 16, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,334 :: INFO :: play_game :: 23 :: trying to play turn number : 31
+2020-10-21 16:18:50,335 :: INFO :: play_game :: 24 :: first player location is :(5, 4)
+2020-10-21 16:18:50,335 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,335 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,335 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,335 :: INFO :: play_game :: 64 :: player two trying to move right
+2020-10-21 16:18:50,335 :: INFO :: play_game :: 71 :: second player freeze
+2020-10-21 16:18:50,335 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 109 :: finish to play turn number : 31
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 110 :: first player location is :(6, 4)
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 16, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 23 :: trying to play turn number : 32
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 24 :: first player location is :(6, 4)
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,336 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,336 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 109 :: finish to play turn number : 32
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 110 :: first player location is :(6, 3)
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 16, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 23 :: trying to play turn number : 33
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 24 :: first player location is :(6, 3)
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,337 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,338 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,338 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,338 :: INFO :: play_game :: 109 :: finish to play turn number : 33
+2020-10-21 16:18:50,338 :: INFO :: play_game :: 110 :: first player location is :(7, 3)
+2020-10-21 16:18:50,338 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,338 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,338 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 16, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,338 :: INFO :: play_game :: 23 :: trying to play turn number : 34
+2020-10-21 16:18:50,339 :: INFO :: play_game :: 24 :: first player location is :(7, 3)
+2020-10-21 16:18:50,339 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,340 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,340 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,340 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,340 :: INFO :: play_game :: 109 :: finish to play turn number : 34
+2020-10-21 16:18:50,340 :: INFO :: play_game :: 110 :: first player location is :(8, 3)
+2020-10-21 16:18:50,340 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,340 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,340 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 16, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,341 :: INFO :: play_game :: 23 :: trying to play turn number : 35
+2020-10-21 16:18:50,341 :: INFO :: play_game :: 24 :: first player location is :(8, 3)
+2020-10-21 16:18:50,341 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,341 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,342 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 109 :: finish to play turn number : 35
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 110 :: first player location is :(9, 3)
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 16, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 23 :: trying to play turn number : 36
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 24 :: first player location is :(9, 3)
+2020-10-21 16:18:50,342 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 32 :: player one trying to move down
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 36 :: player one moved down successfully
+2020-10-21 16:18:50,343 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 109 :: finish to play turn number : 36
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 110 :: first player location is :(10, 3)
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 16, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 23 :: trying to play turn number : 37
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 24 :: first player location is :(10, 3)
+2020-10-21 16:18:50,343 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,344 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,344 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,344 :: INFO :: play_game :: 64 :: player two trying to move right
+2020-10-21 16:18:50,344 :: INFO :: play_game :: 71 :: second player freeze
+2020-10-21 16:18:50,344 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 109 :: finish to play turn number : 37
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 110 :: first player location is :(10, 2)
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 16, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 23 :: trying to play turn number : 38
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 24 :: first player location is :(10, 2)
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 32 :: player one trying to move left
+2020-10-21 16:18:50,345 :: INFO :: play_game :: 36 :: player one moved left successfully
+2020-10-21 16:18:50,345 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 109 :: finish to play turn number : 38
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 110 :: first player location is :(10, 1)
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [16, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 23 :: trying to play turn number : 39
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 24 :: first player location is :(10, 1)
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,346 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,346 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 109 :: finish to play turn number : 39
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 110 :: first player location is :(9, 1)
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [16, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 23 :: trying to play turn number : 40
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 24 :: first player location is :(9, 1)
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 25 :: second player location is :(5, 2)
+2020-10-21 16:18:50,347 :: INFO :: play_game :: 32 :: player one trying to move up
+2020-10-21 16:18:50,348 :: INFO :: play_game :: 36 :: player one moved up successfully
+2020-10-21 16:18:50,348 :: INFO :: convert_map_status_to_numbers_for_ui :: 189 :: trying to convert current map for ui
+2020-10-21 16:18:50,348 :: INFO :: play_game :: 109 :: finish to play turn number : 40
+2020-10-21 16:18:50,348 :: INFO :: play_game :: 110 :: first player location is :(8, 1)
+2020-10-21 16:18:50,348 :: INFO :: play_game :: 111 :: second player location is :(5, 2)
+2020-10-21 16:18:50,348 :: INFO :: play_game :: 112 :: door location is (8, 1)
+2020-10-21 16:18:50,348 :: INFO :: play_game :: 113 :: map  is [[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [17, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]]
+2020-10-21 16:18:50,348 :: INFO :: run_maze :: 33 :: finish to run the game
+2020-10-21 16:18:50,349 :: INFO :: run_maze :: 34 :: turns send to server are [[[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 8, 0, 0, 0, 0, 32], [32, 16, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 16, 0, 8, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 24, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 8, 0, 16, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 16, 0, 0, 0, 0, 32], [32, 8, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 16, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 8, 32, 0, 0, 0, 0, 32, 0, 32], [32, 0, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 16, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 16, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 16, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 16, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 16, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 16, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 16, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 16, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 16, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 16, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 16, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 16, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 16, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 16, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 16, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 16, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 16, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 16, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 16, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 16, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 16, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 16, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 16, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 16, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 16, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 16, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 16, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 16, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 16, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 16, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 16, 0, 32, 32, 32, 32, 32, 32]], False, False, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 16, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [16, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [1, 32, 0, 32, 0, 32, 32, 32, 0, 32], [16, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'running'], [[[32, 32, 32, 32, 32, 32, 32, 32, 32, 32], [32, 0, 0, 0, 0, 0, 0, 0, 0, 32], [32, 0, 32, 32, 32, 32, 32, 32, 0, 32], [32, 0, 32, 0, 0, 0, 0, 32, 0, 32], [32, 8, 32, 0, 32, 32, 0, 32, 0, 32], [32, 32, 0, 0, 32, 32, 0, 32, 0, 32], [0, 0, 0, 32, 0, 0, 0, 32, 0, 32], [17, 32, 0, 32, 0, 32, 32, 32, 0, 32], [0, 32, 0, 32, 0, 0, 0, 0, 0, 32], [0, 0, 0, 0, 32, 32, 32, 32, 32, 32]], False, True, 'first_player']]
+2020-10-21 16:18:50,352 :: INFO :: _log :: 113 :: 127.0.0.1 - - [21/Oct/2020 16:18:50] "[37mGET /game HTTP/1.1[0m" 200 -
+2020-10-22 09:54:39,914 :: INFO :: _log :: 113 ::  * Detected change in 'c:\\Ben\\Nizanim\\GamePlatform\\Game-Platform\\Server\\server.py', reloading
+2020-10-22 09:54:39,976 :: INFO :: _log :: 113 ::  * Restarting with stat
+2020-10-22 09:54:40,492 :: INFO :: <module> :: 48 :: welcome to my flask server
+2020-10-22 09:54:40,492 :: WARNING :: _log :: 113 ::  * Debugger is active!
+2020-10-22 09:54:40,507 :: INFO :: _log :: 113 ::  * Debugger PIN: 198-098-616
+2020-10-22 09:54:40,523 :: INFO :: _log :: 113 ::  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

@@ -22,7 +22,9 @@ def create_game_directory(base_path: str) -> str:
     directory_name = str(uuid.uuid4())
     full_directory_name = os.path.join(base_path, directory_name)
     os.mkdir(full_directory_name)
-
+    # copy maze_game interface for student
+    shutil.copy(os.path.join(Constants.BASE_PATH,Constants.STUDENT_INTERFACE_FILE),
+                os.path.join(full_directory_name, Constants.STUDENT_INTERFACE_FILE))
     filename = os.path.join(full_directory_name, Constants.INIT_FILE_NAME)
     open(filename, "a").close()
     return full_directory_name

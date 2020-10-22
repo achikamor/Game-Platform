@@ -10,9 +10,9 @@ class MapLevel(Enum):
 
 
 class ComputerLevel(Enum):
-    Easy = "Easy"
-    Medium = "Medium"
-    Hard = "Hard"
+    Easy = "1"
+    Medium = "2"
+    Hard = "3"
 
 
 class MapObjectOptions(Enum):
@@ -55,6 +55,9 @@ COMPUTER_PATH = "ComputerCode"
 INIT_FILE_NAME = "init.py"
 FIRST_PLAYER_MODULE_NAME = "first_player.py"
 SECOND_PLAYER_MODULE_NAME = "second_player.py"
+
+STUDENT_INTERFACE_FILE = "maze_game.py"
+
 
 BOMBS_STARTING_AMOUNT = 1
 BOMBS_TURNS_UNTIL_EXPLODE = 3

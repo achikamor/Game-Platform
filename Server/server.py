@@ -13,10 +13,18 @@ logging.basicConfig(format='%(asctime)s :: %(levelname)s :: %(funcName)s :: %(li
 def run_maze():
     logging.info("got a call to route : run maze")
     #if request.method == "POST":
-        #files = request.files['file']
-        #directory_name = game_initializer.create_game_directory(os.path.join(Constants.BASE_PATH, Constants.GAME_PATH))
-        #game_initializer.save_student_code(directory_name, Constants.FIRST_PLAYER_MODULE_NAME, files[0])
-        #game_initializer.save_student_code(directory_name,Constants.SECOND_PLAYER_MODULE_NAME, files[1])
+    # files = request.files['file']
+    # directory_name = game_initializer.create_game_directory(os.path.join(Constants.BASE_PATH, Constants.GAME_PATH))
+    # game_initializer.save_student_code(directory_name, Constants.FIRST_PLAYER_MODULE_NAME, files[0])
+    # if len(files) == 1:
+    #     computer_level = Constants.ComputerLevel.Easy.value
+    #     game_initializer.copy_computer_code_to_game(os.path.join(Constants.BASE_PATH,
+    #                                                              Constants.ComputerCode,
+    #                                                              str(computer_level),
+    #                                                              Constants.SECOND_PLAYER_MODULE_NAME), os.path.join(directory_name,
+    #                                                                                                                 Constants.SECOND_PLAYER_MODULE_NAME))
+    # else:
+    #     game_initializer.save_student_code(directory_name,Constants.SECOND_PLAYER_MODULE_NAME, files[1])
     game_level = Constants.MapLevel.One ###### change to level from request and change enum value
     game_level_map_path = os.path.join(Constants.BASE_PATH, Constants.MAP_PATH, Constants.MapLevel(game_level).value)
     map_path = game_initializer.randomize_map(game_level_map_path)
