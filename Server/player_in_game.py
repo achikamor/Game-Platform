@@ -26,7 +26,7 @@ class PlayerInGame:
 
     def move(self, direction: Constants.DirectionsVector) -> None:
         self.set_cell_as_visited(self._position)
-        # add last move - opposite
+        self.set_last_move(game_engine.convert_direction_vector_to_direction(direction))
         self.set_location((self._position[0] + direction[0], self._position[1] + direction[1]))
 
     def set_cell_as_visited(self, cell_location: (int, int)) -> None:

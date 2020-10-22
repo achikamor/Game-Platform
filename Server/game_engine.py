@@ -168,6 +168,19 @@ def convert_direction_to_direction_vector(direction: Direction) -> DirectionsVec
         logging.error("error while converting direction to direction vector. got unexpected direction")
 
 
+def convert_direction_vector_to_direction(direction: DirectionsVector) -> Direction:
+    if direction == DirectionsVector.UP.value:
+        return Direction.UP
+    elif direction == DirectionsVector.DOWN.value:
+        return Direction.DOWN
+    elif direction == DirectionsVector.LEFT.value:
+        return Direction.LEFT
+    elif direction == DirectionsVector.RIGHT.value:
+        return Direction.RIGHT
+    else:
+        logging.error("error while converting direction vector to direction. got unexpected direction")
+
+
 def convert_action_to_direction_vector(wanted_action: Action) -> DirectionsVector:
     if wanted_action == Action.MOVE_UP:
         return DirectionsVector.UP.value
