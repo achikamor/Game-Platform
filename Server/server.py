@@ -14,7 +14,7 @@ def run_maze():
     logging.info("got a call to route : run maze")
     logging.info("got request from client")
     logging.info("request data is " + str(request.data))
-    #if request.method == "POST":
+
     # files = request.files['file']
     # directory_name = game_initializer.create_game_directory(os.path.join(Constants.BASE_PATH, Constants.GAME_PATH))
     # game_initializer.save_student_code(directory_name, Constants.FIRST_PLAYER_MODULE_NAME, files[0])
@@ -30,7 +30,7 @@ def run_maze():
     game_level = Constants.MapLevel.One ###### change to level from request and change enum value
     game_level_map_path = os.path.join(Constants.BASE_PATH, Constants.MAP_PATH, Constants.MapLevel(game_level).value)
     map_path = game_initializer.randomize_map(game_level_map_path)
-        #result = game_initializer.init_game(map_path,
+    #result = game_initializer.init_game(map_path,
                                             #os.path.join(directory_name, Constants.FIRST_PLAYER_MODULE_NAME),
                                             #os.path.join(directory_name, Constants.SECOND_PLAYER_MODULE_NAME))
     result = run_mock(map_path)
@@ -38,7 +38,7 @@ def run_maze():
     first_player = result[1]
     second_player = result[2]
     game_turns = game_engine.play_game(game_maze, first_player, second_player)
-        #game_initializer.delete_game(directory_name)
+    #game_initializer.delete_game(directory_name)
 
     logging.info("finish to run the game")
     logging.info("turns send to server are " + str(game_turns))

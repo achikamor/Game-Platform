@@ -9,13 +9,18 @@ from werkzeug.utils import secure_filename
 import Constants
 import importlib.util
 import numpy
+import logging
 
 
 def import_student_code(module_name: str, file_path: str) -> PlayerInGame:
-    spec = importlib.util.spec_from_file_location(module_name, file_path)
-    foo = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(foo)
-    return PlayerInGame(foo.play)
+    try:
+        spec = importlib.util.spec_from_file_location(module_name, file_path)
+        foo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(foo)
+        return PlayerInGame(foo.play)
+    except Exception as e:
+        logging.error("failed to import student code : " + str(module_name))
+        logging.error(str(e))
 
 
 def create_game_directory(base_path: str) -> str:
@@ -95,7 +100,7 @@ def delete_game(directory_path: str) -> None:
     try:
         shutil.rmtree(directory_path)
     except Exception as e:
-        print("Deletion of the directory %s failed" % directory_path)
+        print("delete directory %s failed" % directory_path)
         print(str(e))
     else:
         print("Successfully deleted the directory %s" % directory_path)

@@ -13,14 +13,17 @@ class StudentGamePlayer(BaseGamePlayer):
         self.player = current_player
 
     def flash_light(self) -> Direction:
-        return self.player.get_last_move().value
+        last_move = self.player.get_last_move()
+        if last_move is None:
+            last_move = Constants.NO_LAST_MOVE_VALUE
+        else:
+            last_move = last_move.value
+        return last_move
 
     def check_old_steps(self, direction: Direction) -> bool:
         return self.player.is_visit_cell(direction)
 
     def doors_direction(self, direction: Direction) -> bool:
-        logging.info("got doors direction checks. player position : " + str(self.player.get_location()) +
-                     " and direction is + :" + str(direction.value))
         door_location = self.map.get_door_location()
         if direction == Direction.UP:
             return door_location[0] < self.player.get_location()[0]
