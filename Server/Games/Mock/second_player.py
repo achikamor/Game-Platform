@@ -1,5 +1,5 @@
-from maze_game import Direction, Action, DoorDistanceStatus
-from maze_game import BaseGamePlayer
+from Server.Games.Mock.maze_game import Direction, Action, DoorDistanceStatus
+from Server.Games.Mock.maze_game import BaseGamePlayer
 
 
 def play(player: BaseGamePlayer) -> Action:

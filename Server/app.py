@@ -1,23 +1,26 @@
 from flask import Flask, jsonify, request, render_template
 import logging
-import game_engine
-import Constants, game_initializer
+import Server.game_engine as game_engine
+import Server.Constants as Constants
+import Server.game_initializer as game_initializer
 import os
 
-app = Flask(__name__, template_folder=r"C:\Ben\Nizanim\GamePlatform\Game-Platform\final_game\public")
+app = Flask(__name__, template_folder=r"C:\Ben\Nizanim\GamePlatform\Game-Platform\Client\public")
 logger = logging.getLogger(__name__)
-logging.basicConfig(format='%(asctime)s :: %(levelname)s :: %(funcName)s :: %(lineno)d :: %(message)s',level=logging.INFO, filename="log.txt")
+logging.basicConfig(format='%(asctime)s :: %(levelname)s ::	\
+%(module)s ::  %(funcName)s :: %(lineno)d :: %(message)s',level=logging.INFO, filename="log.txt")
+
 
 @app.route("/")
 def hello():
     return render_template("index.html")
+
 
 @app.route('/game')
 def run_maze():
     logging.info("got a call to route : run maze")
     logging.info("got request from client")
     logging.info("request data is " + str(request.data))
-
     # files = request.files['file']
     # directory_name = game_initializer.create_game_directory(os.path.join(Constants.BASE_PATH, Constants.GAME_PATH))
     # game_initializer.save_student_code(directory_name, Constants.FIRST_PLAYER_MODULE_NAME, files[0])

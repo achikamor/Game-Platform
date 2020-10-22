@@ -1,9 +1,9 @@
-from maze_game import Action, Direction, BaseGamePlayer
-from Constants import DirectionsVector
-import Constants
+from Server.maze_game import Action, Direction, BaseGamePlayer
+from Server.Constants import DirectionsVector
+import Server.Constants as Constants
 import logging
 import numpy
-import game_engine
+import Server.game_engine as game_engine
 
 
 class PlayerInGame:

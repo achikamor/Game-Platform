@@ -1,12 +1,12 @@
 import numpy
 import logging
 import copy
-import Constants
-from game_map import GameMap
-from player_in_game import PlayerInGame
-from student_game_player import StudentGamePlayer
-from maze_game import Action, Direction
-from Constants import DirectionsVector, TimeoutException
+import Server.Constants as Constants
+from Server.game_map import GameMap
+from Server.player_in_game import PlayerInGame
+from Server.student_game_player import StudentGamePlayer
+from Server.maze_game import Action, Direction
+from Server.Constants import DirectionsVector, TimeoutException
 from contextlib import contextmanager
 import threading
 import _thread
@@ -17,7 +17,16 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
     game_turns = []
     first_bomb_turns_to_explode = None
     second_bomb_turn_to_explode = None
-    game_status = get_game_status(maze, first_player, second_player, current_turn_number)
+    game_status = Constants.GameOptions.Running
+    if first_player is None:
+        game_status = Constants.GameOptions.FirstPlayerException
+        # if first player code doesnt imported successfully, there is no game
+        game_turns.append([None,False,False,game_status])
+    elif second_player is None:
+        game_status = Constants.GameOptions.SecondPlayerException
+        # if secomd player code doesnt imported successfully, there is no game
+        game_turns.append([None, False, False, game_status])
+
     is_game_interrupted = False
     while game_status == Constants.GameOptions.Running:
         logging.info("trying to play turn number : " + str(current_turn_number))
@@ -29,8 +38,8 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
                 with time_limit(Constants.STUDENT_FUNCTION_MAX_TIME, "first_player play turn"):
                     turn_player = StudentGamePlayer(create_turn_snapshot(maze), first_player)
                     wanted_action = first_player.play(turn_player)
-                    logging.info("player one trying to move "+ str(wanted_action.value))
-                    if wanted_action != Action.DROP_BOMB:
+                    if wanted_action.value != Action.DROP_BOMB.value:
+                        logging.info("player one trying to move "+ str(wanted_action.value))
                         direction_to_move = convert_action_to_direction_vector(wanted_action)
                         if turn_player.check_movement_with_direction_vector(direction_to_move):
                             logging.info("player one moved " + str(wanted_action.value) + " successfully")
@@ -39,10 +48,12 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
                             logging.info("first player freeze")
                             first_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
                     else:
+                        logging.info("first player try to drop a bomb at location " + str(first_player.get_location()))
                         if first_player.can_drop_bomb():
                             maze.set_first_player_bomb(first_player.get_location())
                             first_player.reduce_bomb_count()
                             first_bomb_turns_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+                            logging.info("first player dropped a bomb successfully")
             # if student code contains exception handling, it will not work
             except TimeoutException as e:
                 game_status = Constants.GameOptions.FirstPlayerTimeOut
@@ -61,8 +72,8 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
                 with time_limit(Constants.STUDENT_FUNCTION_MAX_TIME, "second_player play turn"):
                     turn_player = StudentGamePlayer(create_turn_snapshot(maze), second_player)
                     wanted_action = second_player.play(turn_player)
-                    logging.info("player two trying to move "+ str(wanted_action.value))
-                    if wanted_action != Action.DROP_BOMB:
+                    if wanted_action.value != Action.DROP_BOMB.value:
+                        logging.info("player two trying to move "+ str(wanted_action.value))
                         direction_to_move = convert_action_to_direction_vector(wanted_action)
                         if turn_player.check_movement_with_direction_vector(direction_to_move):
                             second_player.move(direction_to_move)
@@ -71,10 +82,12 @@ def play_game(maze: GameMap, first_player: PlayerInGame, second_player: PlayerIn
                             logging.info("second player freeze")
                             second_player.freeze(Constants.HIT_OBSTACLE_FREEZE_TIME)
                     else:
+                        logging.info("second player try to drop  a bomb at location " + str(second_player.get_location()))
                         if second_player.can_drop_bomb():
                             maze.set_second_player_bomb(second_player.get_location())
                             second_player.reduce_bomb_count()
                             second_bomb_turn_to_explode = Constants.BOMBS_TURNS_UNTIL_EXPLODE
+                            logging.info("second player dropped a bomb successfully")
             # if student code contains exception handling, it will not work
             except TimeoutException as e:
                 game_status = Constants.GameOptions.SecondPlayerTimeOut
@@ -139,6 +152,7 @@ def get_game_status(maze: GameMap,
 
 
 def bomb(maze: GameMap, first_player: PlayerInGame, second_player: PlayerInGame, bomb_location: (int, int)) -> None:
+    logging.info("trying to explode bomb at location " + str(bomb_location))
     # checks if first player is within bomb explosion area
     if abs(bomb_location[0] - first_player.get_location()[0]) <= 1 and \
        abs(bomb_location[1] - first_player.get_location()[1]) <= 1:
@@ -156,16 +170,17 @@ def create_turn_snapshot(board: GameMap) -> GameMap:
 
 
 def convert_direction_to_direction_vector(direction: Direction) -> DirectionsVector:
-    if direction == Direction.UP:
+    if direction.value == Direction.UP.value:
         return DirectionsVector.UP.value
-    elif direction == Direction.DOWN:
+    elif direction.value == Direction.DOWN.value:
         return DirectionsVector.DOWN.value
-    elif direction == Direction.LEFT:
+    elif direction.value == Direction.LEFT.value:
         return DirectionsVector.LEFT.value
-    elif direction == Direction.RIGHT:
+    elif direction.value == Direction.RIGHT.value:
         return DirectionsVector.RIGHT.value
     else:
         logging.error("error while converting direction to direction vector. got unexpected direction")
+        logging.error(str(direction))
 
 
 def convert_direction_vector_to_direction(direction: DirectionsVector) -> Direction:
@@ -182,13 +197,13 @@ def convert_direction_vector_to_direction(direction: DirectionsVector) -> Direct
 
 
 def convert_action_to_direction_vector(wanted_action: Action) -> DirectionsVector:
-    if wanted_action == Action.MOVE_UP:
+    if wanted_action.value == Action.MOVE_UP.value:
         return DirectionsVector.UP.value
-    elif wanted_action == Action.MOVE_DOWN:
+    elif wanted_action.value == Action.MOVE_DOWN.value:
         return DirectionsVector.DOWN.value
-    elif wanted_action == Action.MOVE_LEFT:
+    elif wanted_action.value == Action.MOVE_LEFT.value:
         return DirectionsVector.LEFT.value
-    elif wanted_action == Action.MOVE_RIGHT:
+    elif wanted_action.value == Action.MOVE_RIGHT.value:
         return DirectionsVector.RIGHT.value
     else:
         logging.error(

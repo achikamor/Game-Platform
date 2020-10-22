@@ -1,12 +1,12 @@
-from player_in_game import PlayerInGame
-from game_map import GameMap
+from Server.player_in_game import PlayerInGame
+from Server.game_map import GameMap
 import shutil
 import os
 from typing import Tuple
 import uuid
 import random
 from werkzeug.utils import secure_filename
-import Constants
+import Server.Constants as Constants
 import importlib.util
 import numpy
 import logging
@@ -47,6 +47,7 @@ def init_game(map_file_path: str,
     first_player = import_student_code(Constants.FIRST_PLAYER_MODULE_NAME, first_player_file_path)
     second_player = import_student_code(Constants.SECOND_PLAYER_MODULE_NAME, second_player_file_path)
 
+
     with open(map_file_path, "r") as file:
         lines = file.read().splitlines()
         map_obstacles = numpy.full((len(lines) + Constants.MAZE_WALL_BUFFER * 2,
@@ -79,11 +80,15 @@ def init_game(map_file_path: str,
     player_two_location = random.choice(player_two_options)
     door_location = random.choice(door_options)
 
-    first_player.set_location(player_one_location)
-    second_player.set_location(player_two_location)
+    if first_player is not None:
+        first_player.set_location(player_one_location)
+        first_player.init_visited_cells_matrix(len(map_obstacles))
+
+    if second_player is not None:
+        second_player.set_location(player_two_location)
+        second_player.init_visited_cells_matrix(len(map_obstacles))
+
     maze = GameMap(map_obstacles, door_location)
-    first_player.init_visited_cells_matrix(len(map_obstacles))
-    second_player.init_visited_cells_matrix(len(map_obstacles))
 
     return maze, first_player, second_player
 

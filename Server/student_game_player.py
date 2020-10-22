@@ -1,10 +1,10 @@
-from maze_game import Direction, BaseGamePlayer, DoorDistanceStatus
-from player_in_game import PlayerInGame
-from game_map import GameMap
-import Constants, game_engine
+from Server.maze_game import Direction, BaseGamePlayer, DoorDistanceStatus
+from Server.player_in_game import PlayerInGame
+from Server.game_map import GameMap
+import Server.Constants as Constants, Server.game_engine as game_engine
 import logging
 import math
-from Constants import DirectionsVector
+from Server.Constants import DirectionsVector
 
 
 class StudentGamePlayer(BaseGamePlayer):
@@ -13,11 +13,13 @@ class StudentGamePlayer(BaseGamePlayer):
         self.player = current_player
 
     def flash_light(self) -> Direction:
+        logging.info("check flash light")
         last_move = self.player.get_last_move()
         if last_move is None:
             last_move = Constants.NO_LAST_MOVE_VALUE
         else:
             last_move = last_move.value
+        logging.info("return value of flash light is " + str(last_move))
         return last_move
 
     def check_old_steps(self, direction: Direction) -> bool:

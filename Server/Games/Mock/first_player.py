@@ -1,16 +1,15 @@
-from maze_game import Direction, Action, DoorDistanceStatus
-from maze_game import BaseGamePlayer
+from Server.Games.Mock.maze_game import Direction, Action, DoorDistanceStatus
+from Server.Games.Mock.maze_game import BaseGamePlayer
 
 
 def play(player: BaseGamePlayer) -> Action:
-    if player.check_movement(Direction.UP) and not player.check_old_steps(Direction.UP) and \
-            player.flash_light() != Direction.DOWN.value and player.doors_direction(Direction.UP):
+    if player.check_movement(Direction.UP) and not player.check_old_steps(Direction.UP):
         return Action.MOVE_UP
-    elif player.check_movement(Direction.DOWN) and not player.check_old_steps(Direction.DOWN) and \
-            player.flash_light() != Direction.UP.value and player.doors_direction(Direction.DOWN):
+    elif player.check_movement(Direction.DOWN) and not player.check_old_steps(Direction.DOWN):
         return Action.MOVE_DOWN
-    elif player.check_movement(Direction.LEFT) and not player.check_old_steps(Direction.LEFT) and \
-            player.flash_light() != Direction.RIGHT.value and player.doors_direction(Direction.LEFT):
+    elif player.check_movement(Direction.LEFT) and not player.check_old_steps(Direction.LEFT):
         return Action.MOVE_LEFT
-    else:
+    elif player.check_movement(Direction.RIGHT) and not player.check_old_steps(Direction.RIGHT):
         return Action.MOVE_RIGHT
+    else:
+        return Action.DROP_BOMB
