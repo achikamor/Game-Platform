@@ -3,7 +3,7 @@ from Server.Games.Mock.maze_game import BaseGamePlayer
 
 
 def play(player: BaseGamePlayer) -> Action:
-    if player.check_movement(Direction.UP) and not player.check_old_steps(Direction.UP):
+    if player.check_movement(Direction.UP) and not player.check_old_steps(Direction.UP) and player.doors_direction(Direction.UP):
         return Action.MOVE_UP
     elif player.check_movement(Direction.DOWN) and not player.check_old_steps(Direction.DOWN):
         return Action.MOVE_DOWN

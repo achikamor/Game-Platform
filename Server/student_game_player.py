@@ -27,13 +27,13 @@ class StudentGamePlayer(BaseGamePlayer):
 
     def doors_direction(self, direction: Direction) -> bool:
         door_location = self.map.get_door_location()
-        if direction == Direction.UP:
+        if direction.value == Direction.UP.value:
             return door_location[0] < self.player.get_location()[0]
-        elif direction == Direction.DOWN:
+        elif direction.value == Direction.DOWN.value:
             return door_location[0] > self.player.get_location()[0]
-        elif direction == Direction.LEFT:
+        elif direction.value == Direction.LEFT.value:
             return door_location[1] < self.player.get_location()[1]
-        elif direction == Direction.RIGHT:
+        elif direction.value == Direction.RIGHT.value:
             return door_location[1] > self.player.get_location()[1]
         else:
             logging.error("unexpected direction : " + str(direction.value))
